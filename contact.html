@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+	<title>Contact</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira Mono">
+	
+	<script>
+		//adding form validation
+        function validateForm()
+        {
+            var first = document.getElementById('first');
+            var last = document.getElementById('last');
+            var email = document.getElementById('email');
+            var message = document.getElementById('message');
+        
+            if(first.value == "")
+            {
+                first.style.backgroundColor = "Red";
+                window.alert("Please enter you first name");
+                return false;
+            }
+            if(last.value == "")
+            {
+                last.style.backgroundColor = "Red";
+                window.alert("Please enter you last name");
+                return false;
+            }
+            if(email.value == "")
+            {
+                email.style.backgroundColor = "Red";
+                window.alert("Please enter you email");
+                return false;
+            }
+            if(message.value == "")
+            {
+                message.style.backgroundColor = "Red";
+                window.alert("Please enter a message");
+                return false;
+            }
+            return true;
+        
+        }
+	</script>
+	
+</head>
+
+<div class="top-pill-nav">
+
+	<a href="index.html">Home</a>
+	<a href="education.html">Education</a>
+	<a href="skills.html">Skills</a>
+	<a  href="portfolio.html">Portfolio</a>  
+	<a class="active" href="contact.html">Contact</a>  
+
+</div>  
+
+<div class="container">
+
+	<h1 class="contact-heading">Would you like to get in touch?</h1>
+	
+	<!--Put image here-->
+	<img class="contact-image" src="images/women_conversing.jpg" alt="Two African American women sitting at a table while looking at eachother and smiling" />
+	
+	<h3>Please submit the contact form below, and I'll get back to you at my earliest opportunity.</h3>
+
+	<!--contact form; should include the following inputs: name,email, and submit button. Optional inputs: message field.-->
+	
+	<form action="contactform.php" method="post" onsubmit="return validateForm();">
+
+		<label for="first">First Name</label>
+		<input type="text" id="first" name="first" placeholder="Your first name.." required>
+
+		<label for="last">Last Name</label>
+		<input type="text" id="last" name="last" placeholder="Your last name.." required>
+		
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" placeholder="Your email.." required>
+
+		<label for="message">Message</label>
+		<textarea id="message" name="message" placeholder="Write something.." required style="height:200px"></textarea>
+
+		<input type="submit" value="Submit">
+
+  </form>
+  
+</div>
+	
+<footer>
+	<p>
+	Author: Leah G. Tolson<br>
+	<a href="mailto:tolsonl2014@gmail.com">tolsonl2014@gmail.com</a><br>
+	<a href="https://www.linkedin.com/in/leah-tolson-390440248/">LinkedIn</a>
+	</p>
+</footer>	
+
+</body>
+</html>
